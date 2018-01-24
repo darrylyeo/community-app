@@ -7,6 +7,7 @@
 
 import ChallengeDetails from 'routes/ChallengeDetails';
 import TermsDetail from 'routes/TermsDetail';
+import ReviewOpportunitiesDetail from 'routes/ReviewOpportunitiesDetail';
 import Error404 from 'components/Error404';
 import Footer from 'components/TopcoderFooter';
 import Header from 'containers/TopcoderHeader';
@@ -48,6 +49,11 @@ export default function Topcoder() {
           component={Submission}
           exact
           path="/challenges/:challengeId(\d{8})/submit"
+        />
+        <Route
+          component={ReviewOpportunitiesDetail}
+          exact
+          path="/review-opportunities/:challengeId(\d{8})"
         />
         <Error404 />
       </Switch>
